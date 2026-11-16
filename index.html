@@ -944,16 +944,31 @@
             });
         });
 
-        function navigateTo(sectionId) {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+       function navigateTo(sectionId) {
+    // 1. 自动收起移动端菜单
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+    }
+
+    // 2. 获取目标板块和顶部导航栏
+    const target = document.getElementById(sectionId);
+    const nav = document.querySelector('nav');
+    
+    if (target) {
+        // 动态计算导航栏高度（如果没有导航栏则默认留出 110px 安全距离）
+        const navHeight = nav ? nav.offsetHeight : 110; 
+        
+        // 计算目标元素距离页面顶部的绝对位置，并减去导航栏高度
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        
+        // 平滑滚动到精准位置
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
 
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
