@@ -90,11 +90,11 @@
         </div>
     </nav>
 
-    <!-- 第一大板块：深度整合后的首屏、业务矩阵、核心能力与交付流程 -->
+    <!-- 顶层：Hero 核心区与四大业务矩阵深度整合 -->
     <section id="home" class="border-b border-slate-200/60 hero-bg">
         <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
             
-            <!-- 上层：Hero 核心宣传区 -->
+            <!-- 上层：Hero 宣传区 -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
@@ -110,7 +110,7 @@
                         苏州希音电子科技有限公司 · XIORVE
                     </p>
                     <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl">
-                        专注于精密测试测量、电机台架测试与非标自动化集成，面向新能源电驱动、汽车电子、电力电子及工业自动化领域，提供测试仪器选型、测试系统开发、机械电气集成与定制化工程解决方案。
+                        专注于精密测试测量、电机台架测试与非标自动化集成，面向新能源电驱动、汽车电子、电力电子及工业自动化领域，提供测试仪器选型、系统开发、机械电气集成与定制化工程解决方案。
                     </p>
                     <div class="pt-2 flex flex-wrap gap-4">
                         <a href="#products" onclick="navigateTo('products')" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md shadow-blue-600/20 transition-all text-sm">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 
-                <!-- Hero Image -->
+                <!-- Hero 图片 -->
                 <div class="lg:col-span-5">
                     <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
                         <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center relative">
@@ -140,91 +140,106 @@
                 </div>
             </div>
 
-            <!-- 中层上：精简后的四大核心业务板块 -->
-            <div class="border-t border-slate-200/80 bg-white rounded-2xl shadow-sm border border-slate-200 mb-8 overflow-hidden">
-                <div class="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-                    <div class="px-5 py-6 text-center">
-                        <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">01</div>
-                        <div class="text-base md:text-lg font-bold text-slate-900">测试测量仪器</div>
-                        <p class="text-xs text-slate-500 leading-relaxed mt-2">信号采集、测量与分析</p>
+            <!-- 下层（精准定位锚点）：四大核心业务矩阵与技术能力一体化融合 -->
+            <div id="about" class="scroll-mt-24">
+                <div class="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-slate-100">
+                        <div>
+                            <span class="text-xs font-extrabold text-blue-600 uppercase tracking-widest">CORE BUSINESS & CAPABILITIES</span>
+                            <h2 class="text-2xl font-extrabold text-slate-900 mt-1">核心业务矩阵与工程服务能力</h2>
+                        </div>
+                        <p class="text-xs text-slate-500 max-w-md">构建从仪器选型、系统开发、机械电气集成到项目交付的完整闭环。</p>
                     </div>
-                    <div class="px-5 py-6 text-center">
-                        <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">02</div>
-                        <div class="text-base md:text-lg font-bold text-slate-900">电机台架系统</div>
-                        <p class="text-xs text-slate-500 leading-relaxed mt-2">电机性能与电驱动测试</p>
-                    </div>
-                    <div class="px-5 py-6 text-center">
-                        <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">03</div>
-                        <div class="text-base md:text-lg font-bold text-slate-900">自动化测试</div>
-                        <p class="text-xs text-slate-500 leading-relaxed mt-2">测试控制与数据采集</p>
-                    </div>
-                    <div class="px-5 py-6 text-center">
-                        <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">04</div>
-                        <div class="text-base md:text-lg font-bold text-slate-900">非标自动化</div>
-                        <p class="text-xs text-slate-500 leading-relaxed mt-2">定制设备与工程集成</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 中层下：核心能力 (Engineering Capabilities) -->
-            <div id="about" class="mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="text-blue-600 text-xl mb-4">
-                            <i class="fas fa-microchip"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- 业务 01 -->
+                        <div class="bg-slate-50/70 p-5 rounded-xl border border-slate-200/60 hover:border-blue-200 transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-extrabold text-blue-600 tracking-widest">01</span>
+                                    <i class="fas fa-wave-square text-blue-600/70"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">测试测量仪器</h3>
+                                <p class="text-xs font-medium text-blue-600 mb-2">信号采集、测量与分析</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    提供专业的测试仪器选型、系统配置及基础电性测量方案支持。
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">测试技术整合</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">测试仪器选型与系统配置。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="text-blue-600 text-xl mb-4">
-                            <i class="fas fa-gauge-high"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">测试系统开发</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">数据采集、流程控制与软件开发。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="text-blue-600 text-xl mb-4">
-                            <i class="fas fa-gears"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">自动化工程集成</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">机械设计、工装夹具与电气控制。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="text-blue-600 text-xl mb-4">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">项目技术服务</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">方案评估、系统联调与技术支持。</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 底层：工程交付流程 (Engineering Delivery Process) -->
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-1">
-                    ENGINEERING DELIVERY PROCESS
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-6">
-                    工程交付流程
-                </h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
-                        <div class="text-blue-600 font-extrabold text-sm mb-2">01</div>
-                        <div class="font-bold text-slate-800 text-sm">需求沟通</div>
+                        <!-- 业务 02 -->
+                        <div class="bg-slate-50/70 p-5 rounded-xl border border-slate-200/60 hover:border-blue-200 transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-extrabold text-blue-600 tracking-widest">02</span>
+                                    <i class="fas fa-tachometer-alt text-blue-600/70"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">电机台架系统</h3>
+                                <p class="text-xs font-medium text-blue-600 mb-2">电机性能与电驱动测试</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    围绕电机及电驱动测试需求，开展数据采集、流程控制与系统集成开发。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 业务 03 -->
+                        <div class="bg-slate-50/70 p-5 rounded-xl border border-slate-200/60 hover:border-blue-200 transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-extrabold text-blue-600 tracking-widest">03</span>
+                                    <i class="fas fa-gears text-blue-600/70"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">自动化测试与非标集成</h3>
+                                <p class="text-xs font-medium text-blue-600 mb-2">定制设备与工程集成</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    涵盖机械结构设计、工装夹具加工、电气控制与上位机软件开发。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 业务 04 -->
+                        <div class="bg-slate-50/70 p-5 rounded-xl border border-slate-200/60 hover:border-blue-200 transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-extrabold text-blue-600 tracking-widest">04</span>
+                                    <i class="fas fa-headset text-blue-600/70"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">工程交付与服务</h3>
+                                <p class="text-xs font-medium text-blue-600 mb-2">方案评估与技术支持</p>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    提供前期方案评估、系统联调、项目交付及全周期专业技术支持。
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
-                        <div class="text-blue-600 font-extrabold text-sm mb-2">02</div>
-                        <div class="font-bold text-slate-800 text-sm">方案设计</div>
+
+                    <!-- 嵌入式工程交付流程 (Engineering Delivery Process) -->
+                    <div class="mt-8 pt-6 border-t border-slate-100">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <span class="text-[11px] font-bold text-blue-600 uppercase tracking-widest">ENGINEERING DELIVERY PROCESS</span>
+                            <span class="text-xs text-slate-400 font-medium">标准化 Turnkey 项目交付闭环</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="bg-slate-50 rounded-xl p-3.5 text-center border border-slate-200/60">
+                                <div class="text-blue-600 font-extrabold text-xs mb-1">01</div>
+                                <div class="font-bold text-slate-800 text-xs">需求沟通</div>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-3.5 text-center border border-slate-200/60">
+                                <div class="text-blue-600 font-extrabold text-xs mb-1">02</div>
+                                <div class="font-bold text-slate-800 text-xs">方案设计</div>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-3.5 text-center border border-slate-200/60">
+                                <div class="text-blue-600 font-extrabold text-xs mb-1">03</div>
+                                <div class="font-bold text-slate-800 text-xs">制造集成</div>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-3.5 text-center border border-slate-200/60">
+                                <div class="text-blue-600 font-extrabold text-xs mb-1">04</div>
+                                <div class="font-bold text-slate-800 text-xs">联调交付</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
-                        <div class="text-blue-600 font-extrabold text-sm mb-2">03</div>
-                        <div class="font-bold text-slate-800 text-sm">制造集成</div>
-                    </div>
-                    <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-200">
-                        <div class="text-blue-600 font-extrabold text-sm mb-2">04</div>
-                        <div class="font-bold text-slate-800 text-sm">联调交付</div>
-                    </div>
+
                 </div>
             </div>
 
