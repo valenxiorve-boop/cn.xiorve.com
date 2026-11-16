@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>苏州希音电子科技有限公司 | XIORVE - 精密测试测量与非标自动化集成服务商</title>
-    <meta name="description" content="苏州希音电子科技有限公司（XIORVE）专注于精密测试测量仪器、电机台架测试系统与非标自动化集成，面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域提供全生命周期测试与定制交付方案。">
+    <meta name="description" content="苏州希音电子科技有限公司（XIORVE）专注于精密测试测量仪器、电机台架测试系统与非标自动化集成，面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域提供全生命周期测试与定制交付方案。官方网站：www.xiorve.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -46,27 +46,31 @@
 
     <!-- 顶部导航栏 -->
     <nav class="bg-white/90 glass-panel border-b border-slate-200/80 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+            <!-- 左上角公司 LOGO 与名称 -->
             <div class="flex items-center gap-x-3 cursor-pointer" onclick="navigateTo('home')">
-                <div class="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-blue-500/20">X</div>
-                <div>
-                    <span class="font-extrabold text-2xl tracking-tight text-slate-900 block leading-none">XIORVE</span>
-                    <span class="text-[11px] font-semibold text-slate-500 tracking-wider">苏州希音电子科技有限公司</span>
+                <img src="images/LOGO.png" alt="XIORVE Logo" class="h-10 w-auto object-contain">
+                <div class="hidden sm:block">
+                    <span class="text-[10px] font-bold text-blue-600 tracking-wider uppercase block">www.xiorve.com</span>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-x-7 text-sm font-semibold text-slate-600">
+
+            <!-- 导航链接 -->
+            <div class="hidden md:flex items-center gap-x-6 text-sm font-semibold text-slate-600">
                 <a href="#home" onclick="navigateTo('home')" class="nav-link">首页</a>
                 <a href="#about" onclick="navigateTo('about')" class="nav-link">公司简介</a>
+                <a href="#competencies" onclick="navigateTo('competencies')" class="nav-link">核心能力</a>
                 <a href="#products" onclick="navigateTo('products')" class="nav-link">产品矩阵</a>
                 <a href="#motor-test" onclick="navigateTo('motor-test')" class="nav-link">电机台架系统</a>
                 <a href="#automation" onclick="navigateTo('automation')" class="nav-link">非标自动化</a>
+                <a href="#applications" onclick="navigateTo('applications')" class="nav-link">行业应用</a>
                 <a href="#services" onclick="navigateTo('services')" class="nav-link">工程服务</a>
                 <a href="#contact" onclick="navigateTo('contact')" class="nav-link">联系我们</a>
             </div>
             
-            <div class="flex items-center gap-x-4">
+            <div class="flex items-center gap-x-3">
                 <a href="#contact" onclick="navigateTo('contact')" 
-                   class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold shadow-sm transition-all duration-200">
+                   class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold shadow-sm transition-all duration-200">
                     获取方案报价
                 </a>
                 <button onclick="toggleMobileMenu()" class="md:hidden text-xl text-slate-700 p-1">
@@ -74,13 +78,17 @@
                 </button>
             </div>
         </div>
+        
+        <!-- 移动端折叠菜单 -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
-            <div class="px-6 py-4 flex flex-col gap-y-3 font-medium text-slate-700">
+            <div class="px-6 py-4 flex flex-col gap-y-3 font-medium text-slate-700 text-sm">
                 <a href="#home" onclick="navigateTo('home')" class="py-1">首页</a>
                 <a href="#about" onclick="navigateTo('about')" class="py-1">公司简介</a>
+                <a href="#competencies" onclick="navigateTo('competencies')" class="py-1">核心能力</a>
                 <a href="#products" onclick="navigateTo('products')" class="py-1">产品矩阵</a>
                 <a href="#motor-test" onclick="navigateTo('motor-test')" class="py-1">电机台架系统</a>
                 <a href="#automation" onclick="navigateTo('automation')" class="py-1">非标自动化</a>
+                <a href="#applications" onclick="navigateTo('applications')" class="py-1">行业应用</a>
                 <a href="#services" onclick="navigateTo('services')" class="py-1">工程服务</a>
                 <a href="#contact" onclick="navigateTo('contact')" class="py-1">联系我们</a>
             </div>
@@ -94,17 +102,17 @@
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
                     <span>TESTING AUTOMATION SOLUTIONS</span>
                     <span class="text-blue-300">|</span>
-                    <span>苏州 · 中国</span>
+                    <span>www.xiorve.com</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-[52px] font-extrabold text-slate-900 leading-tight tracking-tight">
                     测试更精准<br>
                     <span class="text-blue-600">自动化更高效</span>
                 </h1>
                 <p class="text-lg md:text-xl font-bold text-slate-800">
-                    精密测试测量仪器 · 电机台架测试系统 · 非标自动化集成服务商
+                    苏州希音电子科技有限公司 · 精密测试测量仪器与非标自动化集成服务商[cite: 11]
                 </p>
                 <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl">
-                    苏州希音电子科技有限公司（XIORVE）专注测试测量与非标自动化，赋能智能制造。重点面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域，提供从基础仪器到系统级台架与非标定制的完整交付方案。
+                    专注于测试测量仪器、电机台架测试系统与非标自动化集成，重点面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域，提供全生命周期测试与系统解决方案[cite: 12]。
                 </p>
                 <div class="pt-2 flex flex-wrap gap-4">
                     <a href="#products" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md shadow-blue-600/20 transition-all text-sm">
@@ -117,94 +125,82 @@
             </div>
             <div class="lg:col-span-5">
                 <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
-                    <!-- 预留主视觉设备展示图，保留原图路径结构便于替换 -->
                     <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center relative">
                         <img src="images/xiorve-home-hero.jpg" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                             alt="苏州希音电子电机台架与非标自动化工作站" 
+                             alt="苏州希音电子测试系统与自动化集成" 
                              class="w-full h-full object-cover">
                         <div class="hidden flex-col items-center justify-center p-6 text-center text-slate-500">
                             <i class="fas fa-microchip text-4xl text-blue-600 mb-3"></i>
                             <span class="font-bold text-slate-800 text-sm">PRECISION IN TESTING. POWER IN AUTOMATION.</span>
-                            <span class="text-xs mt-1">电机台架测试系统 & 非标自动化工作站</span>
+                            <span class="text-xs mt-1">www.xiorve.com</span>
                         </div>
                     </div>
                     <div class="grid grid-cols-3 gap-2 pt-3 text-center">
                         <div class="bg-slate-50 rounded-lg py-2 px-1">
                             <div class="text-blue-600 font-extrabold text-sm">±0.05%</div>
-                            <div class="text-[11px] text-slate-500">扭矩测量精度</div>
+                            <div class="text-[11px] text-slate-500">扭矩测量精度[cite: 18]</div>
                         </div>
                         <div class="bg-slate-50 rounded-lg py-2 px-1">
                             <div class="text-blue-600 font-extrabold text-sm">0.2 ms</div>
-                            <div class="text-[11px] text-slate-500">FPGA高速刷新</div>
+                            <div class="text-[11px] text-slate-500">FPGA高速刷新[cite: 18]</div>
                         </div>
                         <div class="bg-slate-50 rounded-lg py-2 px-1">
                             <div class="text-blue-600 font-extrabold text-sm">Turnkey</div>
-                            <div class="text-[11px] text-slate-500">交钥匙非标交付</div>
+                            <div class="text-[11px] text-slate-500">一站式工程交付[cite: 13]</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
          
-        <!-- 四大核心业务板块（对应PDF第2页） -->
+        <!-- 四大核心业务板块（对应PDF V7.6 第2页） -->
         <div class="border-t border-slate-200/80 bg-white">
             <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
                 <div class="px-5 py-6 text-center">
                     <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">01</div>
-                    <div class="text-base md:text-lg font-bold text-slate-900">
-                        测试测量仪器
-                    </div>
-                    <p class="text-xs text-slate-500 leading-relaxed mt-2">
-                        电子信号采集、产生与分析
-                    </p>
+                    <div class="text-base md:text-lg font-bold text-slate-900">测试测量仪器</div>
+                    <p class="text-xs text-slate-500 leading-relaxed mt-2">电子信号采集、产生与分析[cite: 12]</p>
                 </div>
                 <div class="px-5 py-6 text-center">
                     <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">02</div>
-                    <div class="text-base md:text-lg font-bold text-slate-900">
-                        电机台架系统
-                    </div>
-                    <p class="text-xs text-slate-500 leading-relaxed mt-2">
-                        电机性能与动态测试平台
-                    </p>
+                    <div class="text-base md:text-lg font-bold text-slate-900">电机台架系统</div>
+                    <p class="text-xs text-slate-500 leading-relaxed mt-2">电机性能与动态测试平台[cite: 12]</p>
                 </div>
                 <div class="px-5 py-6 text-center">
                     <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">03</div>
-                    <div class="text-base md:text-lg font-bold text-slate-900">
-                        自动化测试
-                    </div>
-                    <p class="text-xs text-slate-500 leading-relaxed mt-2">
-                        测试流程控制与数据采集
-                    </p>
+                    <div class="text-base md:text-lg font-bold text-slate-900">自动化测试</div>
+                    <p class="text-xs text-slate-500 leading-relaxed mt-2">测试流程控制与数据采集[cite: 12]</p>
                 </div>
                 <div class="px-5 py-6 text-center">
                     <div class="text-xs font-extrabold text-blue-600 tracking-widest mb-1">04</div>
-                    <div class="text-base md:text-lg font-bold text-slate-900">
-                        非标集成
-                    </div>
-                    <p class="text-xs text-slate-500 leading-relaxed mt-2">
-                        围绕工艺定制工程方案
-                    </p>
+                    <div class="text-base md:text-lg font-bold text-slate-900">非标集成</div>
+                    <p class="text-xs text-slate-500 leading-relaxed mt-2">围绕工艺定制工程方案[cite: 12]</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 公司简介（对应PDF第2页） -->
+    <!-- 公司简介（对应PDF V7.6 第2页） -->
     <section id="about" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-6 space-y-4">
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">COMPANY PROFILE</span>
                     <h2 class="text-3xl font-extrabold text-slate-900">
-                        专注测试测量与非标自动化，赋能智能制造
+                        专注测试测量与非标自动化，赋能智能制造[cite: 12]
                     </h2>
                     <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        苏州希音电子科技有限公司专注于测试测量仪器、电机台架测试系统与非标自动化集成，为工业客户提供测试设备、系统解决方案与定制化自动化设备。
+                        苏州希音电子科技有限公司专注于测试测量仪器、电机台架测试系统与非标自动化集成，为工业客户提供测试设备、系统解决方案与定制化自动化设备[cite: 12]。
                     </p>
                     <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        公司业务涵盖示波器、功率分析仪、电子负载等精密测试仪器，以及电机台架测试系统、自动化测试平台和非标自动化设备，重点面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域。
+                        公司业务涵盖示波器、功率分析仪、电子负载等精密测试仪器，以及电机台架测试系统、自动化测试平台和非标自动化设备，重点面向新能源电机与电驱动、汽车电子、电力电子及工业自动化等领域[cite: 12]。
                     </p>
+                    <div class="pt-2">
+                        <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-xs font-bold border border-blue-200">
+                            官方网站：www.xiorve.com
+                        </span>
+                    </div>
                 </div>
                 <div class="lg:col-span-6">
                     <div class="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 space-y-5">
@@ -213,24 +209,24 @@
                                 <i class="fas fa-cogs"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-slate-900">综合工程集成与项目交付能力</h3>
+                                <h3 class="text-lg font-bold text-slate-900">综合工程集成与项目交付能力[cite: 12]</h3>
                                 <p class="text-sm text-slate-600 mt-1 leading-relaxed">
-                                    根据项目需求提供方案设计、软件开发、机械加工、系统集成及现场调试等定制化交付服务。
+                                    根据项目需求提供方案设计、软件开发、机械加工、系统集成及现场调试等定制化交付服务[cite: 12]。
                                 </p>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                             <div class="bg-white p-3 rounded-xl border border-slate-200/80 text-center">
-                                <div class="text-xs font-bold text-slate-800">新能源电驱动</div>
+                                <div class="text-xs font-bold text-slate-800">新能源电驱动[cite: 12]</div>
                             </div>
                             <div class="bg-white p-3 rounded-xl border border-slate-200/80 text-center">
-                                <div class="text-xs font-bold text-slate-800">汽车电子</div>
+                                <div class="text-xs font-bold text-slate-800">汽车电子[cite: 12]</div>
                             </div>
                             <div class="bg-white p-3 rounded-xl border border-slate-200/80 text-center">
-                                <div class="text-xs font-bold text-slate-800">电力电子</div>
+                                <div class="text-xs font-bold text-slate-800">电力电子[cite: 12]</div>
                             </div>
                             <div class="bg-white p-3 rounded-xl border border-slate-200/80 text-center">
-                                <div class="text-xs font-bold text-slate-800">工业自动化</div>
+                                <div class="text-xs font-bold text-slate-800">工业自动化[cite: 12]</div>
                             </div>
                         </div>
                     </div>
@@ -239,28 +235,75 @@
         </div>
     </section>
 
-    <!-- 产品与解决方案矩阵（对应PDF第3、4、5、6页） -->
-    <section id="products" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
+    <!-- 核心技术能力与一站式工程交付（对应PDF V7.6 第3页新增） -->
+    <section id="competencies" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
-            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">CORE COMPETENCIES & DELIVERY CAPABILITIES</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">核心技术能力与一站式工程交付[cite: 13]</h2>
+                <p class="text-sm text-slate-600 mt-2">专业电子测试技术 · 深度定制工程集成，构建完整的测试解决方案能力[cite: 13]</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-xl font-extrabold text-blue-600 mb-2">01 技术整合</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        围绕客户的测试与自动化需求，整合测试测量仪器、测试系统、控制技术与自动化设备资源，结合应用场景提供匹配的技术方案[cite: 13]。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-xl font-extrabold text-blue-600 mb-2">02 一体化集成</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        涵盖机械结构设计、自动化夹具加工、电气控制系统集成及上位机测试软件开发，提供从方案设计到系统调试的整体交付[cite: 13]。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-xl font-extrabold text-blue-600 mb-2">03 精密测试模块</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        覆盖示波器、功率分析仪、交直流电源、电子负载等测试设备，支持模块化扩展与多场景快速适配[cite: 13]。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-xl font-extrabold text-blue-600 mb-2">04 项目服务</div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        提供前期选型评估、二次开发支持、现场联调交付及后续维护响应，协助客户推进系统落地[cite: 13]。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 项目交付标准流程条 -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 text-center">
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">从技术研发到项目交付标准流程[cite: 13]</div>
+                <div class="text-sm md:text-base font-extrabold text-slate-900 flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                    <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg">01 需求沟通</span>
+                    <i class="fas fa-arrow-right text-slate-300 text-xs"></i>
+                    <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg">02 方案设计</span>
+                    <i class="fas fa-arrow-right text-slate-300 text-xs"></i>
+                    <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg">03 制造集成</span>
+                    <i class="fas fa-arrow-right text-slate-300 text-xs"></i>
+                    <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg">04 联调验证</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品与解决方案矩阵（对应PDF V7.6 第4、5、6、7页） -->
+    <section id="products" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
                 <div>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">
-                        PORTFOLIO OVERVIEW
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">
-                        产品与解决方案矩阵
-                    </h2>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">PORTFOLIO OVERVIEW</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">产品与解决方案矩阵[cite: 14]</h2>
                 </div>
                 <p class="text-slate-600 text-sm max-w-xl leading-relaxed md:text-right">
-                    覆盖基础测试与电性测量、电源负载模拟、环境可靠性与物理测量，以及系统级定制交付的全系列测试设备。
+                    聚焦新能源电机/电驱动、汽车电子、电力电子及工业自动化领域，提供系统方案与定制化项目交付[cite: 14]。
                 </p>
             </div>
 
-            <!-- 3大核心硬件产品卡片（对齐原网站3列Grid架构与折叠参数表交互） -->
+            <!-- 产品网格 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                 
-                <!-- 卡片 1：通用与专用电子测试仪器方案（对应PDF第4页） -->
+                <!-- 卡片 1：精密测试测量仪器（对应PDF第5页） -->
                 <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col shadow-sm h-full">
                     <div class="flex flex-col h-full">
                         <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center shrink-0">
@@ -270,127 +313,94 @@
                                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
                             <div class="hidden flex-col items-center justify-center text-slate-400">
                                 <i class="fas fa-wave-square text-4xl text-blue-600 mb-2"></i>
-                                <span class="text-xs font-semibold text-slate-600">通用与专用电子测试仪器</span>
+                                <span class="text-xs font-semibold text-slate-600">精密测试测量仪器</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-2 min-h-[38px]">
-                            <h3 class="text-xl font-bold text-slate-900">
-                                精密测试测量仪器
-                            </h3>
-                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200 whitespace-nowrap">
-                                电性测量
-                            </span>
+                            <h3 class="text-xl font-bold text-slate-900">精密测试测量仪器[cite: 14]</h3>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200 whitespace-nowrap">基础测试与电性测量[cite: 14]</span>
                         </div>
-                        <p class="text-xs font-medium text-slate-400 mb-3">
-                            GENERAL & SPECIALIZED TESTING SOLUTIONS
-                        </p>
+                        <p class="text-xs font-medium text-slate-400 mb-3">GENERAL & SPECIALIZED TESTING SOLUTIONS[cite: 15]</p>
                         <p class="text-sm text-slate-600 mb-5 leading-relaxed min-h-[84px]">
-                            面向信号观测与实时采集、功率与阻抗特性分析及专用科研教学场景，提供高带宽、高精度电参数测试仪器与实验平台。
+                            电子信号采集、产生与分析，覆盖多类研发与测试场景[cite: 15]。包含示波器、功率分析仪、信号发生器、阻抗分析仪、录波仪等[cite: 14]。
                         </p>
                         <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6 min-h-[66px]">
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                数字示波器 / 信号发生器 / 多通道录波仪
+                                信号观测与实时采集（示波器、录波仪等）[cite: 15]
                             </li>
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                精密阻抗分析仪 / 高精度功率分析仪 / 数字功率计
+                                功率与阻抗特性分析（功率分析仪、阻抗分析仪等）[cite: 15]
                             </li>
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                综合安规测试仪 / 电池性能测试仪 / IC教学平台
+                                专用测试与教学平台（安规仪、电池测试仪、IC教学平台）[cite: 15]
                             </li>
                         </ul>
 
-                        <!-- 折叠详细清单（保留原版 details 交互体验） -->
                         <details class="mb-6 group border border-slate-200 rounded-xl bg-slate-50/50 overflow-hidden">
                             <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
                                 <span class="flex items-center gap-2">
                                     <i class="fas fa-list-ul text-blue-600"></i>
-                                    查看全系仪器配置清单
+                                    查看全部仪器型号与明细[cite: 15]
                                 </span>
                                 <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <div class="p-3 bg-white border-t border-slate-200 text-xs text-slate-700 space-y-2.5">
-                                <div>
-                                    <span class="font-bold text-slate-900">● 数字示波器：</span>高带宽信号观测，支持多种触发与波形深度分析。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 精密阻抗分析仪：</span>宽频阻抗测量，辅助分析器件与材料特性（如 TH2881-130）。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 信号发生器：</span>输出精准测试信号，适配多类频段与调制需求。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 多通道录波仪：</span>实时采集、长时间显示与高精电信号记录。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 高精度功率分析仪：</span>精确测量功率与谐波分析，适配多测试场景。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 数字功率计：</span>高效率电参数基础测量与多通道数据读取。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 综合安规测试仪：</span>支持耐压、绝缘等多模式安全合规验证。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 电池性能测试仪：</span>面向电池充放电及电气性能综合评估。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● IC教学实验平台：</span>集成的实验平台，服务于高校与科研教学实践。
-                                </div>
+                                <div><span class="font-bold text-slate-900">● 数字示波器：</span>高带宽信号观测，支持多种触发与波形深度分析[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 多通道录波仪：</span>实时采集、长时间显示与高精电信号记录[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 高精度功率分析仪：</span>精确测量功率与谐波分析，适配多测试场景[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 综合安规测试仪：</span>支持耐压、绝缘等多模式安全合规验证[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 信号发生器：</span>输出精准测试信号，适配多类频段与调制需求[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 精密阻抗分析仪：</span>宽频阻抗测量，辅助分析器件与材料特性[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 数字功率计：</span>高效率电参数基础测量与多通道数据读取[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● 电池性能测试仪：</span>面向电池充放电及电气性能综合评估[cite: 15]。</div>
+                                <div><span class="font-bold text-slate-900">● IC教学实验平台：</span>集成的实验平台，服务于高校与科研教学实践[cite: 15]。</div>
                             </div>
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact"
-                               class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
-                                <i class="fas fa-file-alt"></i>
-                                咨询仪器选型与报价
+                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                                <i class="fas fa-file-alt"></i> 咨询仪器选型与报价
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 卡片 2：电源与负载（对应PDF第5页） -->
+                <!-- 卡片 2：电源与负载（对应PDF第6页） -->
                 <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col shadow-sm h-full">
                     <div class="flex flex-col h-full">
                         <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center shrink-0">
                             <img src="images/prod-power-load.png"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                                 alt="可编程电源与电子负载"
+                                 alt="交直流及可编程电源与电子负载"
                                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
                             <div class="hidden flex-col items-center justify-center text-slate-400">
                                 <i class="fas fa-bolt text-4xl text-blue-600 mb-2"></i>
-                                <span class="text-xs font-semibold text-slate-600">可编程电源与电子负载</span>
+                                <span class="text-xs font-semibold text-slate-600">电源与负载</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-2 min-h-[38px]">
-                            <h3 class="text-xl font-bold text-slate-900">
-                                电源与负载
-                            </h3>
-                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200 whitespace-nowrap">
-                                供电与模拟
-                            </span>
+                            <h3 class="text-xl font-bold text-slate-900">电源与负载[cite: 16]</h3>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200 whitespace-nowrap">供电与模拟测试[cite: 16]</span>
                         </div>
-                        <p class="text-xs font-medium text-slate-400 mb-3">
-                            POWER & LOAD
-                        </p>
+                        <p class="text-xs font-medium text-slate-400 mb-3">POWER & LOAD[cite: 16]</p>
                         <p class="text-sm text-slate-600 mb-5 leading-relaxed min-h-[84px]">
-                            为设备供电、负载模拟和性能验证提供测试基础，满足研发实验室、产线老化及电力电子系统验证需求。
+                            为设备供电、负载模拟和性能验证提供测试基础。支持测试供电、电压电流调节、负载模拟及输出性能验证[cite: 16]。
                         </p>
                         <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6 min-h-[66px]">
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                可编程电源：交直流高精度输出 · 多通道独立控制
+                                交直流及可编程电源：交直流高精度输出、多通道独立控制[cite: 16]
                             </li>
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                电子负载：支持 CV / CC / CR / CP 等多种负载模式
+                                电子负载：支持 CV / CC / CR / CP 等负载模式[cite: 16]
                             </li>
                             <li class="flex items-center gap-x-2">
                                 <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                                高精度 · 高稳定性 · 适应多种复杂测试场景
+                                高精度 · 高稳定性 · 适应多种测试场景[cite: 16]
                             </li>
                         </ul>
 
@@ -398,43 +408,25 @@
                             <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
                                 <span class="flex items-center gap-2">
                                     <i class="fas fa-table text-blue-600"></i>
-                                    查看电源与负载核心特性
+                                    查看电源与负载技术参数
                                 </span>
                                 <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
                             </summary>
-                            <div class="p-3 bg-white border-t border-slate-200">
-                                <table class="w-full text-[11px] text-left border-collapse border border-slate-300">
-                                    <thead class="bg-slate-100 text-slate-800 font-semibold">
-                                        <tr>
-                                            <th class="py-2 px-2 border border-slate-300 w-1/3">设备类别</th>
-                                            <th class="py-2 px-2 border border-slate-300">技术特点与功能</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-300 text-slate-700">
-                                        <tr>
-                                            <td class="py-2 px-2 border border-slate-300 font-bold">可编程电源</td>
-                                            <td class="py-2 px-2 border border-slate-300">交直流高精度输出，支持多通道独立控制；按测试需求灵活配置参数，支持多种工作模式。</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-2 border border-slate-300 font-bold">电子负载</td>
-                                            <td class="py-2 px-2 border border-slate-300">支持恒压(CV)、恒流(CC)、恒阻(CR)、恒功率(CP)等负载模式，具备高精度与高稳定性。</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="p-3 bg-white border-t border-slate-200 text-xs text-slate-700 space-y-2">
+                                <div><span class="font-bold text-slate-900">● 交直流及可编程电源：</span>交直流高精度输出，多通道独立控制；按测试需求配置参数，支持多种工作模式[cite: 16]。</div>
+                                <div><span class="font-bold text-slate-900">● 电子负载：</span>支持 CV / CC / CR / CP 等负载模式，高精度、高稳定性，适应多种测试场景[cite: 16]。</div>
                             </div>
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact"
-                               class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
-                                <i class="fas fa-file-alt"></i>
-                                获取电源负载规格书
+                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                                <i class="fas fa-file-alt"></i> 获取电源负载规格书
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 卡片 3：环境可靠性与物理测量设备（对应PDF第6页） -->
+                <!-- 卡片 3：环境可靠性与物理测量设备（对应PDF第7页） -->
                 <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col shadow-sm h-full">
                     <div class="flex flex-col h-full">
                         <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center shrink-0">
@@ -448,35 +440,29 @@
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-2 min-h-[38px]">
-                            <h3 class="text-xl font-bold text-slate-900">
-                                环境与物理测量设备
-                            </h3>
-                            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md border border-slate-200 whitespace-nowrap">
-                                可靠性与结构
-                            </span>
+                            <h3 class="text-xl font-bold text-slate-900">环境与物理测量设备[cite: 14]</h3>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md border border-slate-200 whitespace-nowrap">可靠性与结构测量[cite: 14]</span>
                         </div>
-                        <p class="text-xs font-medium text-slate-400 mb-3">
-                            ENVIRONMENTAL & PHYSICAL TESTING
-                        </p>
+                        <p class="text-xs font-medium text-slate-400 mb-3">ENVIRONMENTAL & PHYSICAL TESTING[cite: 17]</p>
                         <p class="text-sm text-slate-600 mb-5 leading-relaxed min-h-[84px]">
-                            涵盖宽温湿度极端环境可靠性验证、电池包温控充放电一体化测试，以及微米级光学尺寸测量与材料力学分析。
+                            涵盖光学与尺寸测量、物理力学性能评估、极端环境可靠性模拟及电池电芯综合测试[cite: 17]。
                         </p>
                         <div class="grid grid-cols-2 gap-2.5 mb-6 min-h-[66px]">
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
+                                <div class="text-xs font-bold text-slate-900">影像测量仪</div>
+                                <p class="text-[11px] text-slate-500 mt-0.5">微米级非接触光学定位[cite: 17]</p>
+                            </div>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
+                                <div class="text-xs font-bold text-slate-900">材料试验机</div>
+                                <p class="text-[11px] text-slate-500 mt-0.5">多模式力学试验加载[cite: 17]</p>
+                            </div>
+                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
                                 <div class="text-xs font-bold text-slate-900">高低温试验箱</div>
-                                <p class="text-[11px] text-slate-500 mt-0.5">宽温湿度/快速温变</p>
+                                <p class="text-[11px] text-slate-500 mt-0.5">快速温变环境耐久模拟[cite: 17]</p>
                             </div>
                             <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
                                 <div class="text-xs font-bold text-slate-900">环境充放电一体机</div>
-                                <p class="text-[11px] text-slate-500 mt-0.5">电池包综合测试</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-xs font-bold text-slate-900">影像测量仪</div>
-                                <p class="text-[11px] text-slate-500 mt-0.5">微米级光学定位</p>
-                            </div>
-                            <div class="rounded-xl border border-slate-200 bg-slate-50 p-2.5">
-                                <div class="text-xs font-bold text-slate-900">材料试验机/显微镜</div>
-                                <p class="text-[11px] text-slate-500 mt-0.5">力学与金相分析</p>
+                                <p class="text-[11px] text-slate-500 mt-0.5">电池包综合性能设计[cite: 17]</p>
                             </div>
                         </div>
 
@@ -484,31 +470,21 @@
                             <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
                                 <span class="flex items-center gap-2">
                                     <i class="fas fa-list-ul text-blue-600"></i>
-                                    查看环境与物理设备详情
+                                    查看环境与物理设备明细[cite: 17]
                                 </span>
                                 <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
                             </summary>
                             <div class="p-3 bg-white border-t border-slate-200 text-xs text-slate-700 space-y-2.5">
-                                <div>
-                                    <span class="font-bold text-slate-900">● 高低温试验箱：</span>宽范围温湿度精准控制与快速温变，验证产品极端环境耐久度。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 环境箱与充放电一体机：</span>深度集成温度环境模拟与电池充放电测试，专为电池包性能设计。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 影像测量仪：</span>高精度非接触测量与光学定位，满足微米级精密形貌分析。
-                                </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">● 材料试验机及金相显微镜：</span>支持拉伸、压缩及弯曲等多模式力学试验与精准加载控制。
-                                </div>
+                                <div><span class="font-bold text-slate-900">● 影像测量仪：</span>高精度非接触测量与光学定位，满足微米级精密形貌分析[cite: 17]。</div>
+                                <div><span class="font-bold text-slate-900">● 材料试验机：</span>支持拉伸、压缩及弯曲等多模式力学试验与精准加载控制[cite: 17]。</div>
+                                <div><span class="font-bold text-slate-900">● 高低温试验箱：</span>宽范围温湿度精准控制与快速温变，验证产品极端环境耐久度[cite: 17]。</div>
+                                <div><span class="font-bold text-slate-900">● 环境箱与充放电一体机：</span>深度集成温度环境模拟与电池充放电测试，专为电池包性能设计[cite: 17]。</div>
                             </div>
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact"
-                               class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
-                                <i class="fas fa-file-alt"></i>
-                                咨询环境与物理测试方案
+                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                                <i class="fas fa-file-alt"></i> 咨询环境与物理测试方案
                             </a>
                         </div>
                     </div>
@@ -518,208 +494,240 @@
         </div>
     </section>
 
-    <!-- 电机台架测试系统（对应PDF第7页） -->
-    <section id="motor-test" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
+    <!-- 电机台架测试系统（对应PDF V7.6 第8页） -->
+    <section id="motor-test" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
                 <div>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">
-                        MOTOR TEST SYSTEMS
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">
-                        电机台架测试系统
-                    </h2>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">MOTOR TEST SYSTEMS</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">电机台架测试系统[cite: 18]</h2>
                 </div>
                 <p class="text-slate-600 text-sm max-w-2xl leading-relaxed md:text-right">
-                    高效能、高精度电机/电控测试系统：基于自研底层 FPGA 纳秒级同步架构与高速数据采集技术，提供从研发验证、计量检测到产线出厂的全生命周期台架测试方案。
+                    高效能·高精度电机/电控测试系统：基于自研底层 FPGA 纳秒级同步架构与高速数据采集技术，提供从研发验证、计量检测到产线出厂的全生命周期台架测试方案[cite: 18]。
                 </p>
             </div>
 
             <!-- 核心指标高亮条 -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-5 flex items-center justify-between">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 flex items-center justify-between shadow-sm">
                     <div>
-                        <div class="text-xs font-semibold text-blue-700">高精度测量控制</div>
-                        <div class="text-2xl font-extrabold text-slate-900 mt-1">扭矩精度 ±0.05%</div>
+                        <div class="text-xs font-semibold text-blue-600">高精度测量控制[cite: 18]</div>
+                        <div class="text-2xl font-extrabold text-slate-900 mt-1">扭矩精度 ±0.05%[cite: 18]</div>
                     </div>
-                    <i class="fas fa-tachometer-alt text-3xl text-blue-600/30"></i>
+                    <i class="fas fa-tachometer-alt text-3xl text-blue-600/20"></i>
                 </div>
-                <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-5 flex items-center justify-between">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 flex items-center justify-between shadow-sm">
                     <div>
-                        <div class="text-xs font-semibold text-blue-700">FPGA 底层同步采集</div>
-                        <div class="text-2xl font-extrabold text-slate-900 mt-1">最快 0.2ms 刷新</div>
+                        <div class="text-xs font-semibold text-blue-600">FPGA 底层高速同步采集[cite: 18]</div>
+                        <div class="text-2xl font-extrabold text-slate-900 mt-1">最快 0.2ms 刷新[cite: 18]</div>
                     </div>
-                    <i class="fas fa-microchip text-3xl text-blue-600/30"></i>
+                    <i class="fas fa-microchip text-3xl text-blue-600/20"></i>
                 </div>
-                <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-5 flex items-center justify-between">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 flex items-center justify-between shadow-sm">
                     <div>
-                        <div class="text-xs font-semibold text-blue-700">复杂工况测试能力</div>
-                        <div class="text-2xl font-extrabold text-slate-900 mt-1">最高 6 台多机闭环</div>
+                        <div class="text-xs font-semibold text-blue-600">多机同步与多场景覆盖[cite: 18]</div>
+                        <div class="text-2xl font-extrabold text-slate-900 mt-1">最高 6 台闭环同步[cite: 18]</div>
                     </div>
-                    <i class="fas fa-network-wired text-3xl text-blue-600/30"></i>
+                    <i class="fas fa-network-wired text-3xl text-blue-600/20"></i>
                 </div>
             </div>
 
             <!-- 四大技术优势卡片 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2 mb-2">
-                        <i class="fas fa-crosshairs text-blue-600"></i>
-                        高精度测量与闭环控制
+                        <i class="fas fa-crosshairs text-blue-600"></i> 高精度测量与闭环控制[cite: 18]
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        扭矩测量精度 <span class="font-bold text-slate-900">±0.05%</span>，控制准确度 <span class="font-bold text-slate-900">±0.1%</span>；转速测量精度 <span class="font-bold text-slate-900">±0.01 rpm</span>，控制准确度 <span class="font-bold text-slate-900">±1 rpm</span>。
+                        扭矩测量精度 <span class="font-bold text-slate-900">±0.05%</span>，控制准确度 <span class="font-bold text-slate-900">±0.1%</span>；转速测量精度 <span class="font-bold text-slate-900">±0.01 rpm</span>，控制准确度 <span class="font-bold text-slate-900">±1 rpm</span>[cite: 18]。
                     </p>
                 </div>
 
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2 mb-2">
-                        <i class="fas fa-bolt text-blue-600"></i>
-                        FPGA 纳秒级高速同步采集
+                        <i class="fas fa-bolt text-blue-600"></i> FPGA 纳秒级高速同步采集[cite: 18]
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        <span class="font-bold text-slate-900">50MHz</span> 底层采集，刷新率高达 <span class="font-bold text-slate-900">0.2ms</span>；<span class="font-bold text-slate-900">14通道</span>同步采集，支持光纤信号接入隔离高压。
+                        <span class="font-bold text-slate-900">50MHz</span> 底层采集，刷新率高达 <span class="font-bold text-slate-900">0.2ms</span>；<span class="font-bold text-slate-900">14通道</span>同步采集，支持光纤信号接入隔离高压[cite: 18]。
                     </p>
                 </div>
 
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2 mb-2">
-                        <i class="fas fa-sync-alt text-blue-600"></i>
-                        多机同步与多场景覆盖
+                        <i class="fas fa-sync-alt text-blue-600"></i> 多机同步与多场景覆盖[cite: 18]
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        支持最高 <span class="font-bold text-slate-900">6台测功机</span>同步闭环；覆盖电机对拖、计量检测、可靠性老化及动力总成测试。
+                        支持最高 <span class="font-bold text-slate-900">6台测功机</span>同步闭环；覆盖电机对拖、计量检测、可靠性老化及动力总成测试[cite: 18]。
                     </p>
                 </div>
 
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50">
+                <div class="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2 mb-2">
-                        <i class="fas fa-shield-alt text-blue-600"></i>
-                        符合国标与行业规范
+                        <i class="fas fa-shield-alt text-blue-600"></i> 符合国标与行业规范[cite: 18]
                     </h3>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        严格遵循 <span class="font-bold text-slate-900">GB/T 18488</span> 等国家标准，适配新能源车驱动、机器人关节及工业电机检测。
+                        严格遵循 <span class="font-bold text-slate-900">GB/T 18488</span> 等国家标准，适配新能源车驱动、机器人关节及工业电机检测[cite: 18]。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 非标自动化解决方案（对应PDF第8页） -->
-    <section id="automation" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
+    <!-- 非标自动化解决方案（对应PDF V7.6 第9页） -->
+    <section id="automation" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
                 <div>
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">
-                        CUSTOM AUTOMATION SOLUTIONS
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">
-                        非标自动化解决方案
-                    </h2>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">CUSTOM AUTOMATION SOLUTIONS</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">非标自动化解决方案[cite: 19]</h2>
                 </div>
                 <p class="text-slate-600 text-sm max-w-xl leading-relaxed md:text-right">
-                    围绕客户工艺与生产需求，提供从方案设计到系统集成的定制化设备解决方案。根据产品结构、节拍要求、检测标准及现场条件，规划适配的自动化工位与设备。
+                    围绕客户工艺与生产需求，提供从方案设计到系统集成的定制化设备解决方案。根据产品结构、节拍要求、检测标准及现场条件，规划适配的自动化工位与设备[cite: 19]。
                 </p>
             </div>
 
-            <!-- 服务范围四步流程 -->
+            <!-- 四步服务范围 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-2xl font-extrabold text-blue-600 mb-3">01</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">方案设计</h3>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="text-2xl font-extrabold text-blue-600 mb-3">01 方案设计[cite: 19]</div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        梳理工艺流程、设备布局与关键需求，规划适配产线节拍的自动化工位。
+                        梳理工艺流程、设备布局与关键需求[cite: 19]。
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-2xl font-extrabold text-blue-600 mb-3">02</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">机械与电气集成</h3>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="text-2xl font-extrabold text-blue-600 mb-3">02 机械与电气集成[cite: 19]</div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        结合精密夹具、执行机构、传感器与电气控制系统完成整机装配。
+                        结合夹具、机构、传感器与控制系统[cite: 19]。
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-2xl font-extrabold text-blue-600 mb-3">03</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">软件与测试</h3>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="text-2xl font-extrabold text-blue-600 mb-3">03 软件与测试[cite: 19]</div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        实现自动化控制逻辑、高速数据采集、MES对接与功能合规验证。
+                        实现控制逻辑、数据采集与功能验证[cite: 19]。
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                    <div class="text-2xl font-extrabold text-blue-600 mb-3">04</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">交付与支持</h3>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="text-2xl font-extrabold text-blue-600 mb-3">04 交付与支持[cite: 19]</div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        协助现场联调、设备验收、操作培训及长期远程技术支持。
+                        协助联调、验收及远程技术支持[cite: 19]。
                     </p>
                 </div>
             </div>
 
             <!-- 典型应用方向 & 定制流程 -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div class="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div>
-                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">典型应用方向</div>
+                    <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">典型应用方向[cite: 19]</div>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-3.5 py-2 bg-slate-100 text-slate-800 rounded-lg text-xs font-bold">■ 检测与测量工站</span>
-                        <span class="px-3.5 py-2 bg-slate-100 text-slate-800 rounded-lg text-xs font-bold">■ 工装夹具与定位机构</span>
-                        <span class="px-3.5 py-2 bg-slate-100 text-slate-800 rounded-lg text-xs font-bold">■ 自动送料与辅助装配</span>
-                        <span class="px-3.5 py-2 bg-slate-100 text-slate-800 rounded-lg text-xs font-bold">■ 半自动设备及产线改造</span>
+                        <span class="px-3.5 py-2 bg-white text-slate-800 rounded-lg text-xs font-bold border border-slate-200">■ 检测与测量工站[cite: 19]</span>
+                        <span class="px-3.5 py-2 bg-white text-slate-800 rounded-lg text-xs font-bold border border-slate-200">■ 工装夹具与定位机构[cite: 19]</span>
+                        <span class="px-3.5 py-2 bg-white text-slate-800 rounded-lg text-xs font-bold border border-slate-200">■ 自动送料与辅助装配[cite: 19]</span>
+                        <span class="px-3.5 py-2 bg-white text-slate-800 rounded-lg text-xs font-bold border border-slate-200">■ 半自动设备及产线改造[cite: 19]</span>
                     </div>
                 </div>
-                <div class="lg:text-right border-t lg:border-t-0 pt-4 lg:pt-0 border-slate-100">
-                    <div class="text-xs font-bold text-slate-400 uppercase mb-1">定制方案流程</div>
-                    <div class="text-sm font-extrabold text-slate-900">
-                        需求沟通 <span class="text-blue-600 mx-1">→</span> 方案设计 <span class="text-blue-600 mx-1">→</span> 制造集成 <span class="text-blue-600 mx-1">→</span> 联调验证
+                <div class="lg:text-right border-t lg:border-t-0 pt-4 lg:pt-0 border-slate-200">
+                    <div class="text-xs font-bold text-slate-400 uppercase mb-1">定制方案流程[cite: 19]</div>
+                    <div class="text-xs md:text-sm font-extrabold text-slate-900">
+                        需求沟通 <span class="text-blue-600 mx-1">→</span> 方案设计 <span class="text-blue-600 mx-1">→</span> 制造集成 <span class="text-blue-600 mx-1">→</span> 联调验证[cite: 19]
                     </div>
+                    <div class="text-[11px] text-slate-500 mt-1">可根据项目范围，灵活提供设计、制造集成及远程技术支持[cite: 19]。</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 工程服务支持（对应PDF第9页） -->
+    <!-- 典型行业应用与测试场景（对应PDF V7.6 第10页新增） -->
+    <section id="applications" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">INDUSTRY APPLICATIONS & TEST SCENARIOS</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">典型行业应用与测试场景[cite: 20]</h2>
+                <p class="text-sm text-slate-600 mt-2">面向新能源电驱动、智能制造、电力电子与科研教育，提供测试设备与系统集成方案[cite: 20]。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 行业 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="text-blue-600 font-extrabold text-sm tracking-wider">01 NEW ENERGY VEHICLES</div>
+                    <h3 class="text-lg font-bold text-slate-900">新能源汽车与电驱动[cite: 20]</h3>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 驱动电机 EOL 出厂测试台架[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 电控逆变器动态测试系统[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 电池包高低温环境耐久与温控综合验证平台[cite: 20]</li>
+                    </ul>
+                </div>
+
+                <!-- 行业 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="text-blue-600 font-extrabold text-sm tracking-wider">02 SMART MANUFACTURING</div>
+                    <h3 class="text-lg font-bold text-slate-900">智能制造与机器人[cite: 20]</h3>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 机器人关节电机高精度扭矩测试系统[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 自动化产线终检 EOL 测量工站[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 伺服驱动器负载响应测试[cite: 20]</li>
+                    </ul>
+                </div>
+
+                <!-- 行业 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="text-blue-600 font-extrabold text-sm tracking-wider">03 POWER ELECTRONICS</div>
+                    <h3 class="text-lg font-bold text-slate-900">电力电子与光伏储能[cite: 20]</h3>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 储能变流器(PCS)效率分析[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 交直流大功率电子负载测试[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 高压电气绝缘与安规合规性验证[cite: 20]</li>
+                    </ul>
+                </div>
+
+                <!-- 行业 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="text-blue-600 font-extrabold text-sm tracking-wider">04 RESEARCH INSTITUTES</div>
+                    <h3 class="text-lg font-bold text-slate-900">高校与科研院所[cite: 20]</h3>
+                    <ul class="space-y-2 text-xs text-slate-600">
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> IC芯片与集成电路教学实验平台[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 电机控制实验室设备搭建[cite: 20]</li>
+                        <li class="flex items-start gap-1.5"><i class="fas fa-check text-blue-600 mt-0.5"></i> 科研项目测试系统定制[cite: 20]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工程服务支持（对应PDF V7.6 第11页） -->
     <section id="services" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">ENGINEERING SERVICES</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">从设备选型到系统落地</h2>
-                <p class="text-sm text-slate-600 mt-2">
-                    围绕实际测试流程，提供产品支持与全周期工程服务
-                </p>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">从设备选型到系统落地[cite: 21]</h2>
+                <p class="text-sm text-slate-600 mt-2">围绕实际测试流程，提供产品支持与工程服务（方案设计 / 软件开发 / 机械加工 / 系统集成 / 现场调试）[cite: 21]</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
                     <div class="w-10 h-10 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center mb-4">01</div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">产品选型与定制</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        结合测试对象、量程与工艺需求，协助选择设备或规划定制方案。
-                    </p>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">产品选型与定制[cite: 21]</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">结合测试对象、量程与工艺需求，协助选择设备或规划定制方案[cite: 21]。</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
                     <div class="w-10 h-10 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center mb-4">02</div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">系统集成</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        按应用场景整合仪器、电源、负载、控制与机械结构。
-                    </p>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">系统集成[cite: 21]</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">按应用场景整合仪器、电源、负载、控制与机械结构[cite: 21]。</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
                     <div class="w-10 h-10 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center mb-4">03</div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">软件与调试</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        支持测试软件开发、系统联调与现场调试。
-                    </p>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">软件与调试[cite: 21]</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">支持测试软件开发、系统联调与现场调试[cite: 21]。</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
                     <div class="w-10 h-10 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center mb-4">04</div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">培训与售后</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        提供产品使用指导、技术培训与售后支持。
-                    </p>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">培训与售后[cite: 21]</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">提供产品使用指导、技术培训与售后支持[cite: 21]。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系我们（对应PDF第10页） -->
+    <!-- 联系我们（对应PDF V7.6 第12页，邮箱统一为 sales@xiorve.com，并加入 www.xiorve.com） -->
     <section id="contact" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -727,10 +735,9 @@
                 <div class="lg:col-span-5 space-y-6">
                     <div>
                         <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">CONTACT US</span>
-                        <h2 class="text-3xl font-extrabold mt-1">联系我们</h2>
-                        <p class="text-slate-400 text-sm mt-2">
-                            期待与您探讨精密测试测量与非标自动化需求
-                        </p>
+                        <h2 class="text-3xl font-extrabold mt-1">联系我们[cite: 22]</h2>
+                        <p class="text-slate-400 text-sm mt-2">期待与您探讨测试与自动化需求[cite: 22]</p>
+                        <p class="text-blue-400 text-xs font-semibold mt-1">官方网址：www.xiorve.com</p>
                     </div>
 
                     <div class="space-y-4 pt-2">
@@ -739,8 +746,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <div class="text-xs text-slate-400">公司地址</div>
-                                <div class="text-sm font-semibold text-white mt-0.5">江苏省苏州市相城区御窑路88号</div>
+                                <div class="text-xs text-slate-400">公司地址[cite: 22]</div>
+                                <div class="text-sm font-semibold text-white mt-0.5">江苏省苏州市相城区御窑路88号[cite: 22]</div>
                             </div>
                         </div>
 
@@ -749,10 +756,10 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <div class="text-xs text-slate-400">联系电话</div>
+                                <div class="text-xs text-slate-400">联系电话[cite: 22]</div>
                                 <div class="text-sm font-semibold text-white mt-0.5 space-y-1">
-                                    <div>贾先生：<a href="tel:18605127455" class="hover:text-blue-400 transition-colors">18605127455</a></div>
-                                    <div>鲍先生：<a href="tel:18761931258" class="hover:text-blue-400 transition-colors">18761931258</a></div>
+                                    <div>贾先生：<a href="tel:18605127455" class="hover:text-blue-400 transition-colors">18605127455</a>[cite: 22]</div>
+                                    <div>鲍先生：<a href="tel:18761931258" class="hover:text-blue-400 transition-colors">18761931258</a>[cite: 22]</div>
                                 </div>
                             </div>
                         </div>
@@ -762,10 +769,9 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <div class="text-xs text-slate-400">电子邮箱</div>
-                                <div class="text-sm font-semibold text-white mt-0.5 space-y-1">
-                                    <div>鲍先生：<a href="mailto:18761931258@163.com" class="hover:text-blue-400 transition-colors">18761931258@163.com</a></div>
-                                    <div>贾先生：<a href="mailto:113029423@qq.com" class="hover:text-blue-400 transition-colors">113029423@qq.com</a></div>
+                                <div class="text-xs text-slate-400">电子邮箱（统一商务对接）</div>
+                                <div class="text-sm font-semibold text-white mt-0.5">
+                                    <a href="mailto:sales@xiorve.com" class="hover:text-blue-400 transition-colors underline">sales@xiorve.com</a>
                                 </div>
                             </div>
                         </div>
@@ -794,8 +800,8 @@
                             <div>
                                 <label class="block text-xs font-medium text-slate-300 mb-1.5">关注业务方向</label>
                                 <select class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
-                                    <option>精密测试测量仪器（示波器/功率分析仪等）</option>
-                                    <option>可编程电源与电子负载</option>
+                                    <option>精密测试测量仪器</option>
+                                    <option>电源与负载</option>
                                     <option>环境可靠性与物理测量设备</option>
                                     <option>电机台架测试系统</option>
                                     <option>非标自动化 Turnkey 解决方案</option>
@@ -807,10 +813,10 @@
                             <textarea rows="3" required placeholder="请简述被测对象、量程精度要求、节拍或定制需求..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
                         </div>
                         <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-blue-600/20">
-                            提交需求，获取工程师一对一对接
+                            提交需求，获取工程师一对一对接（发往 sales@xiorve.com）
                         </button>
                         <p id="form-feedback" class="hidden text-xs text-emerald-400 text-center pt-1 font-medium">
-                            需求已生成，您也可以直接拨打 18605127455（贾先生）或 18761931258（鲍先生）加速对接。
+                            需求已生成！您也可以直接发送邮件至 sales@xiorve.com 或拨打 18605127455 / 18761931258[cite: 22]。
                         </p>
                     </form>
                 </div>
@@ -819,10 +825,10 @@
             <!-- 页脚 -->
             <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
                 <div>
-                    © 2026 苏州希音电子科技有限公司 | XIORVE 版权所有
+                    © 2026 苏州希音电子科技有限公司 | XIORVE 版权所有 · 官方网站：<a href="https://www.xiorve.com" class="text-blue-400 hover:underline">www.xiorve.com</a>
                 </div>
                 <div class="font-semibold tracking-wider text-slate-500">
-                    PRECISION IN TESTING. POWER IN AUTOMATION.
+                    PRECISION IN TESTING. POWER IN AUTOMATION.[cite: 22]
                 </div>
             </div>
         </div>
