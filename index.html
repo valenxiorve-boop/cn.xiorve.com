@@ -8,39 +8,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
-        
-        body {
-            font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
-            color: #0f172a;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
+    
+    body {
+        font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+        color: #0f172a;
+        /* 核心关键：全局设置所有锚点跳转时向上偏移 110px，完美避开大 LOGO 导航栏 */
+        scroll-padding-top: 110px; 
+    }
 
-        .hero-bg {
-            background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%);
-        }
+    .hero-bg {
+        background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%);
+    }
 
-        .nav-link {
-            transition: all 0.2s ease;
-        }
+    .nav-link {
+        transition: all 0.2s ease;
+    }
 
-        .nav-link:hover {
-            color: #2563eb;
-        }
+    .nav-link:hover {
+        color: #2563eb;
+    }
 
-        .product-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    .product-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12);
-        }
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12);
+    }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(12px);
-        }
-    </style>
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+    }
+</style>
 </head>
 <body class="bg-slate-50 antialiased">
 
