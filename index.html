@@ -47,9 +47,9 @@
     <!-- 顶部导航栏 -->
     <nav class="bg-white/90 glass-panel border-b border-slate-200/80 sticky top-0 z-50 shadow-xs">
         <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
-            <!-- 左上角公司 LOGO -->
+            <!-- 左上角公司 LOGO（采用你要求的精准像素高度：手机端 80px，电脑端 120px，完美填满左上角大区域） -->
             <div class="flex items-center cursor-pointer py-1" onclick="navigateTo('home')">
-                <img src="images/LOGO.png" alt="XIORVE 苏州希音电子科技有限公司" class="h-16 md:h-24 w-auto object-contain">
+                <img src="images/LOGO.png" alt="XIORVE 苏州希音电子科技有限公司" class="h-[80px] md:h-[120px] w-auto object-contain">
             </div>
 
             <!-- 导航链接 -->
@@ -477,7 +477,7 @@
         </div>
     </section>
 
-    <!-- 电机台架测试系统（适配 1046×587 16:9 高清大图排版） -->
+    <!-- 电机台架测试系统 -->
     <section id="motor-test" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
@@ -515,9 +515,8 @@
                 </div>
             </div>
 
-            <!-- 左图右文黄金布局：完美适配 1046×587 (16:9) 宽屏高清图 -->
+            <!-- 左图右文布局：适配 1046×587 (16:9) 大图 -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- 左侧 16:9 实景大图展示区 -->
                 <div class="lg:col-span-6">
                     <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/40">
                         <div class="aspect-[16/9] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center relative">
@@ -538,7 +537,6 @@
                     </div>
                 </div>
 
-                <!-- 右侧四大技术优势列表 -->
                 <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-sm">
                         <h3 class="text-base font-bold text-slate-900 flex items-center gap-2 mb-2">
@@ -580,7 +578,7 @@
         </div>
     </section>
 
-    <!-- 非标自动化解决方案（适配 1046×587 16:9 高清大图排版） -->
+    <!-- 非标自动化解决方案 -->
     <section id="automation" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
@@ -593,9 +591,7 @@
                 </p>
             </div>
 
-            <!-- 左文右图黄金布局：左侧定制流程与方向，右侧 16:9 自动化产线实景 -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
-                <!-- 左侧四步服务范围 -->
                 <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
                         <div class="text-xl font-extrabold text-blue-600 mb-2">01 方案设计</div>
@@ -623,7 +619,6 @@
                     </div>
                 </div>
 
-                <!-- 右侧 16:9 非标自动化高清大图 -->
                 <div class="lg:col-span-6">
                     <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/40">
                         <div class="aspect-[16/9] bg-white rounded-xl overflow-hidden flex items-center justify-center relative border border-slate-100">
@@ -645,7 +640,6 @@
                 </div>
             </div>
 
-            <!-- 底部典型应用方向 & 定制流程条 -->
             <div class="bg-slate-50 rounded-2xl p-6 md:p-7 border border-slate-200 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div>
                     <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">典型应用方向</div>
@@ -667,7 +661,7 @@
         </div>
     </section>
 
-    <!-- 典型行业应用与测试场景（专为其 240×148 尺寸设计点对点高清缩略图框） -->
+    <!-- 典型行业应用与测试场景（4张 240×148 小图框） -->
     <section id="applications" class="py-14 md:py-16 bg-slate-50/70 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
@@ -677,9 +671,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- 行业 1：新能源汽车与电驱动 -->
+                <!-- 行业 1 -->
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center product-card">
-                    <!-- 严格按照 240x148 比例与像素容器渲染，杜绝拉伸模糊 -->
                     <div class="w-[240px] h-[148px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200/80 mb-4 flex items-center justify-center shrink-0">
                         <img src="images/app-ev-motor.jpg"
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
@@ -701,7 +694,7 @@
                     </div>
                 </div>
 
-                <!-- 行业 2：智能制造与机器人 -->
+                <!-- 行业 2 -->
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center product-card">
                     <div class="w-[240px] h-[148px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200/80 mb-4 flex items-center justify-center shrink-0">
                         <img src="images/app-robotics.jpg"
@@ -724,7 +717,7 @@
                     </div>
                 </div>
 
-                <!-- 行业 3：电力电子与光伏储能 -->
+                <!-- 行业 3 -->
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center product-card">
                     <div class="w-[240px] h-[148px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200/80 mb-4 flex items-center justify-center shrink-0">
                         <img src="images/app-power.jpg"
@@ -747,7 +740,7 @@
                     </div>
                 </div>
 
-                <!-- 行业 4：高校与科研院所 -->
+                <!-- 行业 4 -->
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center product-card">
                     <div class="w-[240px] h-[148px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200/80 mb-4 flex items-center justify-center shrink-0">
                         <img src="images/app-research.jpg"
@@ -807,7 +800,7 @@
         </div>
     </section>
 
-    <!-- 联系我们 -->
+    <!-- 联系我们（集成原版 Web3Forms 真实发信对接销售邮箱 sales@xiorve.com） -->
     <section id="contact" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -858,47 +851,56 @@
                     </div>
                 </div>
 
-                <!-- 右侧在线需求表单 -->
+                <!-- 右侧 Web3Forms 在线真实发信表单 -->
                 <div class="lg:col-span-7">
-                    <form onsubmit="handleContactSubmit(event)" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 md:p-8 space-y-4">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 md:p-8">
                         <h3 class="text-lg font-bold text-white mb-2">在线提交技术咨询与报价需求</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">您的姓名 *</label>
-                                <input type="text" required placeholder="请输入姓名" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                        <p class="text-xs text-slate-400 mb-6">提交后将实时发送至销售邮箱：<span class="text-blue-400 font-medium">sales@xiorve.com</span></p>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
+                            <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">您的姓名 *</label>
+                                    <input type="text" name="Name" required placeholder="请输入姓名" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">联系邮箱 / 电话 *</label>
+                                    <input type="text" name="Email_Or_Phone" required placeholder="请输入电子邮箱或手机号" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">联系电话 / 微信 *</label>
-                                <input type="tel" required placeholder="请输入手机号码" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">公司名称</label>
+                                    <input type="text" name="Company" placeholder="请输入所在企业/机构名称" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">关注业务方向</label>
+                                    <select name="Business_Focus" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                                        <option>精密测试测量仪器</option>
+                                        <option>电源与负载</option>
+                                        <option>环境可靠性与物理测量设备</option>
+                                        <option>电机台架测试系统</option>
+                                        <option>非标自动化 Turnkey 解决方案</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                             <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">公司名称</label>
-                                <input type="text" placeholder="请输入所在企业/机构名称" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
+                                <label class="block text-xs font-medium text-slate-300 mb-1.5">具体测试参数或项目需求说明 *</label>
+                                <textarea name="Message" rows="3" required placeholder="请简述被测对象、量程精度要求、节拍或定制需求..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
                             </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">关注业务方向</label>
-                                <select class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500">
-                                    <option>精密测试测量仪器</option>
-                                    <option>电源与负载</option>
-                                    <option>环境可靠性与物理测量设备</option>
-                                    <option>电机台架测试系统</option>
-                                    <option>非标自动化 Turnkey 解决方案</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-1.5">具体测试参数或项目需求说明 *</label>
-                            <textarea rows="3" required placeholder="请简述被测对象、量程精度要求、节拍或定制需求..." class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-blue-600/20">
-                            提交需求，获取工程师一对一对接（发往 sales@xiorve.com）
-                        </button>
-                        <p id="form-feedback" class="hidden text-xs text-emerald-400 text-center pt-1 font-medium">
-                            需求已生成！您也可以直接发送邮件至 sales@xiorve.com 或拨打 18605127455 / 18761931258。
-                        </p>
-                    </form>
+
+                            <button type="submit" id="submit-btn" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-blue-600/20">
+                                发送需求（直达 sales@xiorve.com）
+                            </button>
+                        </form>
+
+                        <div id="result" class="text-center text-sm mt-3 font-medium hidden"></div>
+                    </div>
                 </div>
             </div>
 
@@ -914,7 +916,51 @@
         </div>
     </section>
 
+    <!-- JavaScript 脚本（包含 Web3Forms 真实发信异步处理及页面平滑滚动） -->
     <script>
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('result');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.innerText = "发送中 (Sending)...";
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let resJson = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "✅ 需求已成功发送至 sales@xiorve.com！我们将尽快与您联系。";
+                    result.className = "text-center text-sm mt-3 font-medium text-emerald-400";
+                    form.reset();
+                } else {
+                    result.innerHTML = resJson.message || "发送失败，请稍后重试！";
+                    result.className = "text-center text-sm mt-3 font-medium text-red-400";
+                }
+            })
+            .catch(error => {
+                result.innerHTML = "网络错误！请检查您的网络连接。";
+                result.className = "text-center text-sm mt-3 font-medium text-red-400";
+            })
+            .then(function() {
+                submitBtn.innerText = "发送需求（直达 sales@xiorve.com）";
+                submitBtn.disabled = false;
+                result.classList.remove('hidden');
+            });
+        });
+
         function navigateTo(sectionId) {
             const mobileMenu = document.getElementById('mobile-menu');
             if (!mobileMenu.classList.contains('hidden')) {
@@ -931,10 +977,7 @@
             mobileMenu.classList.toggle('hidden');
         }
 
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            document.getElementById('form-feedback').classList.remove('hidden');
-        }
+        console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
     </script>
 </body>
 </html>
