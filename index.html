@@ -13,8 +13,11 @@
     body {
         font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
         color: #0f172a;
-        /* 核心关键：全局设置所有锚点跳转时向上偏移 110px，完美避开大 LOGO 导航栏 */
-        scroll-padding-top: 110px; 
+    }
+
+    /* 核心关键：为页面所有带有 id 的板块设定滚动时顶部留白（预留 140px 高度，刚好避开大 LOGO 导航栏） */
+    section[id] {
+        scroll-margin-top: 130px;
     }
 
     .hero-bg {
@@ -945,37 +948,34 @@
         });
 
        function navigateTo(sectionId) {
-    // 1. 自动收起移动端菜单
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-    }
-
-    // 2. 获取目标板块和顶部导航栏
-    const target = document.getElementById(sectionId);
-    const nav = document.querySelector('nav');
-    
-    if (target) {
-        // 动态计算导航栏高度（如果没有导航栏则默认留出 110px 安全距离）
-        const navHeight = nav ? nav.offsetHeight : 110; 
-        
-        // 计算目标元素距离页面顶部的绝对位置，并减去导航栏高度
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-        
-        // 平滑滚动到精准位置
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
-}
-
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
+   <script>
+    // 手机端导航折叠切换
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) {
             mobileMenu.classList.toggle('hidden');
         }
+    }
 
-        console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
-    </script>
+    // 精准平滑跳转函数（配合上面的 scroll-margin-top 完美对齐）
+    function navigateTo(sectionId) {
+        // 1. 自动收起移动端菜单
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // 2. 找到对应板块并平滑滚动
+        const target = document.getElementById(sectionId);
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' // 确保板块顶部与视口顶部对齐
+            });
+        }
+    }
+
+    console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
+</script>
 </body>
 </html>
