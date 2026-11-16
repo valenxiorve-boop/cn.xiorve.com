@@ -8,44 +8,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
-    
-    body {
-        font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
-        color: #0f172a;
-    }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+            color: #0f172a;
+        }
 
-    /* 核心关键：为页面所有带有 id 的板块设定滚动时顶部留白（预留 140px 高度，刚好避开大 LOGO 导航栏） */
-    section[id] {
-        scroll-margin-top: 130px;
-    }
+        /* 统一所有 section 和 div 锚点的顶部留白，精准避开大 LOGO 导航栏 */
+        section[id], div[id] {
+            scroll-margin-top: 135px;
+        }
 
-    .hero-bg {
-        background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%);
-    }
+        .hero-bg {
+            background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%);
+        }
 
-    .nav-link {
-        transition: all 0.2s ease;
-    }
+        .nav-link {
+            transition: all 0.2s ease;
+        }
 
-    .nav-link:hover {
-        color: #2563eb;
-    }
+        .nav-link:hover {
+            color: #2563eb;
+        }
 
-    .product-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    .product-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12);
-    }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12);
+        }
 
-    .glass-panel {
-        background: rgba(255, 255, 255, 0.88);
-        backdrop-filter: blur(12px);
-    }
-</style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
 <body class="bg-slate-50 antialiased">
 
@@ -74,7 +74,7 @@
                    class="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold shadow-md shadow-blue-600/20 transition-all duration-200">
                     获取方案报价
                 </a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden text-xl text-slate-700 p-1.5 rounded-lg hover:bg-slate-100">
+                <button type="button" onclick="toggleMobileMenu()" aria-label="打开菜单" class="lg:hidden text-xl text-slate-700 p-2 rounded-lg hover:bg-slate-100">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -83,14 +83,14 @@
         <!-- 移动端折叠菜单 -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 shadow-lg">
             <div class="px-6 py-4 flex flex-col gap-y-3 font-medium text-slate-700 text-sm">
-                <a href="#home" onclick="navigateTo('home')" class="py-1">首页</a>
-                <a href="#about" onclick="navigateTo('about')" class="py-1">公司与能力</a>
-                <a href="#products" onclick="navigateTo('products')" class="py-1">产品矩阵</a>
-                <a href="#motor-test" onclick="navigateTo('motor-test')" class="py-1">电机台架系统</a>
-                <a href="#automation" onclick="navigateTo('automation')" class="py-1">非标自动化</a>
-                <a href="#applications" onclick="navigateTo('applications')" class="py-1">行业应用</a>
-                <a href="#services" onclick="navigateTo('services')" class="py-1">工程服务</a>
-                <a href="#contact" onclick="navigateTo('contact')" class="py-1">联系我们</a>
+                <a href="#home" onclick="navigateTo('home')" class="py-1.5">首页</a>
+                <a href="#about" onclick="navigateTo('about')" class="py-1.5">公司与能力</a>
+                <a href="#products" onclick="navigateTo('products')" class="py-1.5">产品矩阵</a>
+                <a href="#motor-test" onclick="navigateTo('motor-test')" class="py-1.5">电机台架系统</a>
+                <a href="#automation" onclick="navigateTo('automation')" class="py-1.5">非标自动化</a>
+                <a href="#applications" onclick="navigateTo('applications')" class="py-1.5">行业应用</a>
+                <a href="#services" onclick="navigateTo('services')" class="py-1.5">工程服务</a>
+                <a href="#contact" onclick="navigateTo('contact')" class="py-1.5">联系我们</a>
             </div>
         </div>
     </nav>
@@ -146,7 +146,7 @@
             </div>
 
             <!-- 下层（精准定位锚点）：四大核心业务矩阵与技术能力一体化融合 -->
-            <div id="about" class="scroll-mt-24">
+            <div id="about">
                 <div class="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-sm">
                     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-slate-100">
                         <div>
@@ -218,7 +218,7 @@
                         </div>
                     </div>
 
-                    <!-- 嵌入式工程交付流程 (Engineering Delivery Process) -->
+                    <!-- 嵌入式工程交付流程 -->
                     <div class="mt-8 pt-6 border-t border-slate-100">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                             <span class="text-[11px] font-bold text-blue-600 uppercase tracking-widest">ENGINEERING DELIVERY PROCESS</span>
@@ -251,11 +251,6 @@
         </div>
     </section>
 
-    <!-- 后续产品矩阵、电机台架、非标自动化等板块保持原样不变 -->
-    <!-- （在此处衔接你原代码中接下来的产品与其他部分代码） -->
-
-</body>
-</html>
     <!-- 产品与解决方案矩阵 -->
     <section id="products" class="py-14 md:py-16 bg-white border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto px-6">
@@ -330,7 +325,7 @@
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                            <a href="#contact" onclick="navigateTo('contact')" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
                                 <i class="fas fa-file-alt"></i> 咨询仪器选型与报价
                             </a>
                         </div>
@@ -388,7 +383,7 @@
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                            <a href="#contact" onclick="navigateTo('contact')" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
                                 <i class="fas fa-file-alt"></i> 获取电源负载规格书
                             </a>
                         </div>
@@ -452,7 +447,7 @@
                         </details>
 
                         <div class="mt-auto pt-1">
-                            <a href="#contact" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                            <a href="#contact" onclick="navigateTo('contact')" class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
                                 <i class="fas fa-file-alt"></i> 咨询环境与物理测试方案
                             </a>
                         </div>
@@ -786,7 +781,7 @@
         </div>
     </section>
 
-    <!-- 联系我们（集成原版 Web3Forms 真实发信对接销售邮箱 sales@xiorve.com） -->
+    <!-- 联系我们 -->
     <section id="contact" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -902,80 +897,83 @@
         </div>
     </section>
 
-    <!-- JavaScript 脚本（包含 Web3Forms 真实发信异步处理及页面平滑滚动） -->
+    <!-- 统一完整的 JavaScript 脚本 -->
     <script>
+        // 1. Web3Forms 表单提交处理
         const form = document.getElementById('contact-form');
         const result = document.getElementById('result');
         const submitBtn = document.getElementById('submit-btn');
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            submitBtn.innerText = "发送中 (Sending)...";
-            submitBtn.disabled = true;
-            
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitBtn.innerText = "发送中 (Sending)...";
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let resJson = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = "✅ 需求已成功发送至 sales@xiorve.com！我们将尽快与您联系。";
-                    result.className = "text-center text-sm mt-3 font-medium text-emerald-400";
-                    form.reset();
-                } else {
-                    result.innerHTML = resJson.message || "发送失败，请稍后重试！";
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let resJson = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "✅ 需求已成功发送至 sales@xiorve.com！我们将尽快与您联系。";
+                        result.className = "text-center text-sm mt-3 font-medium text-emerald-400";
+                        form.reset();
+                    } else {
+                        result.innerHTML = resJson.message || "发送失败，请稍后重试！";
+                        result.className = "text-center text-sm mt-3 font-medium text-red-400";
+                    }
+                })
+                .catch(error => {
+                    result.innerHTML = "网络错误！请检查您的网络连接。";
                     result.className = "text-center text-sm mt-3 font-medium text-red-400";
-                }
-            })
-            .catch(error => {
-                result.innerHTML = "网络错误！请检查您的网络连接。";
-                result.className = "text-center text-sm mt-3 font-medium text-red-400";
-            })
-            .then(function() {
-                submitBtn.innerText = "发送需求（直达 sales@xiorve.com）";
-                submitBtn.disabled = false;
-                result.classList.remove('hidden');
-            });
-        });
-
-       function navigateTo(sectionId) {
-   <script>
-    // 手机端导航折叠切换
-    function toggleMobileMenu() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu) {
-            mobileMenu.classList.toggle('hidden');
-        }
-    }
-
-    // 精准平滑跳转函数（配合上面的 scroll-margin-top 完美对齐）
-    function navigateTo(sectionId) {
-        // 1. 自动收起移动端菜单
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
-
-        // 2. 找到对应板块并平滑滚动
-        const target = document.getElementById(sectionId);
-        if (target) {
-            target.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start' // 确保板块顶部与视口顶部对齐
+                })
+                .then(function() {
+                    submitBtn.innerText = "发送需求（直达 sales@xiorve.com）";
+                    submitBtn.disabled = false;
+                    result.classList.remove('hidden');
+                });
             });
         }
-    }
 
-    console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
-</script>
+        // 2. 手机端导航折叠切换
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        }
+
+        // 3. 精准平滑跳转函数
+        function navigateTo(sectionId) {
+            if (window.event) {
+                window.event.preventDefault();
+            }
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
+    </script>
 </body>
 </html>
