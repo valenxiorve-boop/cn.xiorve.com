@@ -789,7 +789,8 @@
                         <p class="text-blue-400 text-xs font-semibold mt-1">官方网址：www.xiorve.com</p>
                     </div>
 
-                    <div class="space-y-4 pt-2">
+                    <div class="space-y-5 pt-2">
+                        <!-- 公司地址 -->
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -800,19 +801,36 @@
                             </div>
                         </div>
 
+                        <!-- 联系电话与对应微信二维码（左右并排，纵向一一对应） -->
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
-                            <div>
-                                <div class="text-xs text-slate-400">联系电话</div>
-                                <div class="text-sm font-semibold text-white mt-0.5 space-y-1">
-                                    <div>贾先生：<a href="tel:18605127455" class="hover:text-blue-400 transition-colors">18605127455</a></div>
-                                    <div>鲍先生：<a href="tel:18761931258" class="hover:text-blue-400 transition-colors">18761931258</a></div>
+                            <div class="flex-1">
+                                <div class="text-xs text-slate-400 mb-2.5">联系电话与微信</div>
+                                <div class="grid grid-cols-2 gap-3.5">
+                                    <!-- 左侧：贾先生 -->
+                                    <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-3.5 flex flex-col items-center text-center">
+                                        <div class="text-sm font-bold text-white">贾先生</div>
+                                        <a href="tel:18605127455" class="text-xs font-semibold text-blue-400 hover:underline mt-1">18605127455</a>
+                                        <div class="w-24 h-24 bg-white p-1.5 rounded-lg mt-2.5 flex items-center justify-center">
+                                            <img src="images/wechat-jia.png" alt="贾先生微信二维码" class="w-full h-full object-contain">
+                                        </div>
+                                    </div>
+
+                                    <!-- 右侧：鲍先生 -->
+                                    <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-3.5 flex flex-col items-center text-center">
+                                        <div class="text-sm font-bold text-white">鲍先生</div>
+                                        <a href="tel:18761931258" class="text-xs font-semibold text-blue-400 hover:underline mt-1">18761931258</a>
+                                        <div class="w-24 h-24 bg-white p-1.5 rounded-lg mt-2.5 flex items-center justify-center">
+                                            <img src="images/wechat-bao.png" alt="鲍先生微信二维码" class="w-full h-full object-contain">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- 电子邮箱 -->
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
                                 <i class="fas fa-envelope"></i>
@@ -825,7 +843,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
                 <!-- 右侧 Web3Forms 在线真实发信表单 -->
                 <div class="lg:col-span-7">
