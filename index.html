@@ -779,8 +779,9 @@
     <!-- 联系我们 -->
     <section id="contact" class="py-16 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <!-- 左侧公司联系信息 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- 左侧公司联系信息 (占 5 列) -->
                 <div class="lg:col-span-5 space-y-6">
                     <div>
                         <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">CONTACT US</span>
@@ -814,7 +815,7 @@
                                         <div class="text-sm font-bold text-white">贾先生</div>
                                         <a href="tel:18605127455" class="text-xs font-semibold text-blue-400 hover:underline mt-1">18605127455</a>
                                         <div class="w-24 h-24 bg-white p-1.5 rounded-lg mt-2.5 flex items-center justify-center">
-                                            <img src="images/wechat-jia.png" alt="贾先生微信二维码" class="w-full h-full object-contain">
+                                            <img src="images/wechat-contact1.png" alt="贾先生微信二维码" class="w-full h-full object-contain">
                                         </div>
                                     </div>
 
@@ -823,7 +824,7 @@
                                         <div class="text-sm font-bold text-white">鲍先生</div>
                                         <a href="tel:18761931258" class="text-xs font-semibold text-blue-400 hover:underline mt-1">18761931258</a>
                                         <div class="w-24 h-24 bg-white p-1.5 rounded-lg mt-2.5 flex items-center justify-center">
-                                            <img src="images/wechat-bao.png" alt="鲍先生微信二维码" class="w-full h-full object-contain">
+                                            <img src="images/wechat-contact2.png" alt="鲍先生微信二维码" class="w-full h-full object-contain">
                                         </div>
                                     </div>
                                 </div>
@@ -843,11 +844,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                <!-- 右侧 Web3Forms 在线真实发信表单 -->
+                <!-- 右侧 Web3Forms 在线真实发信表单 (占 7 列) -->
                 <div class="lg:col-span-7">
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 md:p-8">
-                        <h3 class="text-lg font-bold text-white mb-2">在线提交技术咨询与报价需求</h3>
+                        <h3 class="text-lg font-bold text-white mb-6">在线提交技术咨询与报价需求</h3>
+                        
                         <form id="contact-form" class="space-y-4">
                             <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
                             <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
@@ -893,6 +896,7 @@
                         <div id="result" class="text-center text-sm mt-3 font-medium hidden"></div>
                     </div>
                 </div>
+
             </div>
 
             <!-- 页脚 -->
